@@ -28,4 +28,3 @@ The stable `opportunity_key` is calculated before any write. A retry searches fo
 ## Release boundary
 
 The repository contains provider-neutral contracts and controlled examples. Airtable workspace IDs, Make organisation IDs, connection IDs, prospect details and private operating records are deliberately excluded.
-

@@ -39,4 +39,3 @@ assert.deepEqual(
 assert(routes.cases.every((item) => item.external_action_performed === false));
 
 console.log("Airtable and Make contracts are valid.");
-
