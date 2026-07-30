@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "cases": [
+    {
+      "intake_id": "INT-001",
+      "source": "manual_referral",
+      "title": "CRM workflow review",
+      "fit_score": 82,
+      "publishable": true,
+      "existing_opportunity_key": null,
+      "expected_route": "accepted",
+      "external_action_performed": false
+    },
+    {
+      "intake_id": "INT-002",
+      "source": "manual_referral",
+      "title": "CRM workflow review",
+      "fit_score": 82,
+      "publishable": true,
+      "existing_opportunity_key": "manual-referral:crm-workflow-review",
+      "expected_route": "duplicate",
+      "external_action_performed": false
+    },
+    {
+      "intake_id": "INT-003",
+      "source": "website",
+      "title": "",
+      "fit_score": null,
+      "publishable": false,
+      "existing_opportunity_key": null,
+      "expected_route": "invalid",
+      "external_action_performed": false
+    },
+    {
+      "intake_id": "INT-004",
+      "source": "agency",
+      "title": "Integration delivery support",
+      "fit_score": 68,
+      "publishable": true,
+      "existing_opportunity_key": null,
+      "expected_route": "owner_review",
+      "external_action_performed": false
+    }
+  ]
+}
+

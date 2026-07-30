@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "name": "Opportunity Intake Router",
+  "active": false,
+  "external_actions": [],
+  "steps": [
+    {
+      "id": "M01",
+      "name": "source_admission",
+      "rule": "Accept manual or owner-approved intake only"
+    },
+    {
+      "id": "M02",
+      "name": "stable_key",
+      "rule": "Normalise source and title into opportunity_key"
+    },
+    {
+      "id": "M03",
+      "name": "required_fields",
+      "rule": "Require intake_id, source, title, fit_score and publishable"
+    },
+    {
+      "id": "M04",
+      "name": "duplicate_guard",
+      "rule": "Search Opportunities by opportunity_key before any write"
+    },
+    {
+      "id": "M05",
+      "name": "route_decision",
+      "rule": "Select accepted, duplicate, invalid or owner_review"
+    },
+    {
+      "id": "M06",
+      "name": "bounded_writes",
+      "rule": "Write only to the tables allowed by the route matrix"
+    },
+    {
+      "id": "M07",
+      "name": "terminal_status",
+      "rule": "Save processed, duplicate, invalid or needs_review"
+    }
+  ]
+}
+

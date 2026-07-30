@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "tables": [
+    {
+      "name": "Intake Queue",
+      "primary_field": "intake_id",
+      "fields": [
+        "intake_id",
+        "source",
+        "title",
+        "submitted_at",
+        "fit_score",
+        "processing_status",
+        "opportunity_key",
+        "publishable",
+        "source_reference"
+      ]
+    },
+    {
+      "name": "Opportunities",
+      "primary_field": "opportunity_id",
+      "fields": [
+        "opportunity_id",
+        "opportunity_key",
+        "source",
+        "title",
+        "stage",
+        "fit_score",
+        "budget_band",
+        "next_action",
+        "next_action_due",
+        "decision_owner",
+        "publishable"
+      ]
+    },
+    {
+      "name": "Activities",
+      "primary_field": "activity_id",
+      "fields": [
+        "activity_id",
+        "opportunity_id",
+        "activity_type",
+        "occurred_at",
+        "summary",
+        "external_action_performed",
+        "publishable"
+      ]
+    },
+    {
+      "name": "Projects",
+      "primary_field": "project_id",
+      "fields": [
+        "project_id",
+        "opportunity_id",
+        "name",
+        "stage",
+        "project_type",
+        "accepted_scope",
+        "acceptance_criteria",
+        "handoff_approved",
+        "next_milestone",
+        "delivery_asset_id",
+        "publishable"
+      ]
+    },
+    {
+      "name": "Delivery Assets",
+      "primary_field": "delivery_asset_id",
+      "fields": [
+        "delivery_asset_id",
+        "name",
+        "status",
+        "asset_type",
+        "scope",
+        "local_package",
+        "public_url",
+        "publishable"
+      ]
+    },
+    {
+      "name": "Exceptions",
+      "primary_field": "exception_id",
+      "fields": [
+        "exception_id",
+        "opportunity_id",
+        "exception_type",
+        "severity",
+        "observed_value",
+        "allowed_value",
+        "resolution",
+        "status",
+        "publishable"
+      ]
+    }
+  ]
+}
+
