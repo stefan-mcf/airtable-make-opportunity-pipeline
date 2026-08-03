@@ -35,6 +35,15 @@ The Airtable base keeps intake, opportunities, activity history, exceptions and 
 
 ![Pipeline overview](assets/pipeline-overview.png)
 
+## Outreach operations
+
+The outreach ledger keeps source coverage, delivery state and due follow-up
+visible without giving the workflow authority to send messages. The connected
+view distinguishes direct-client and agency sources while keeping manual
+review and external-action boundaries explicit.
+
+![Outreach ledger and follow-up controls](assets/outreach-analytics.png)
+
 ## Airtable structure
 
 The public schema under [`contracts/airtable-schema.json`](contracts/airtable-schema.json) records the system's table and field design without workspace identifiers or operating data.
@@ -82,7 +91,7 @@ The validator checks the required tables, the seven router stages, unique exampl
 ## Repository contents
 
 ```text
-assets/       selected Airtable and Make screens
+assets/       five presentation-ready Airtable and Make views
 contracts/    provider-neutral data and routing contracts
 examples/     controlled route cases and expected outcomes
 scripts/      structural validator
