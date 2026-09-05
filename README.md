@@ -44,6 +44,8 @@ review and external-action boundaries explicit.
 
 ![Outreach ledger and follow-up controls](assets/outreach-analytics.png)
 
+Historical internal operating view, published 3 August 2026. The displayed counts describe that retained snapshot of SM Systems activity, not current pipeline totals or results achieved for a client.
+
 ## Airtable structure
 
 The public schema under [`contracts/airtable-schema.json`](contracts/airtable-schema.json) records the system's table and field design without workspace identifiers or operating data.
