@@ -8,9 +8,18 @@ The operating view lives in Airtable. Make handles bounded routing between intak
 
 **My contribution:** Data model, Make scenario, routing controls and delivery workflow.
 
-![Pipeline overview](assets/pipeline-overview.png)
+## Four intakes, four routing decisions
 
-*Retained project view. The [evidence index](docs/evidence.md) contains the full published sequence and its historical context.*
+The [four public fixture cases](examples/routes.json) represent the decisions exercised during controlled Airtable and Make verification.
+
+| Intake | Observed route |
+| --- | --- |
+| Complete referral | Created one opportunity and one activity |
+| Retry of the same referral | Matched the existing opportunity key |
+| Missing required fields | Created an exception for review |
+| Complete but ambiguous agency opportunity | Stopped for an owner decision |
+
+`npm run validate` checks the local contracts and fixture expectations. The provider test ended with the Make router inactive. See the [retained pipeline view](assets/pipeline-overview.png) and [evidence index](docs/evidence.md) for the historical record.
 
 ## How it works
 
@@ -60,16 +69,7 @@ The public schema under [`contracts/airtable-schema.json`](contracts/airtable-sc
 
 ### Make routing
 
-The router performs seven ordered steps: source admission, key generation, required-field checks, duplicate detection, route selection, bounded writes and terminal status.
-
-Four route families were exercised against the connected system:
-
-- a valid record created one opportunity and one activity;
-- a retry matched the existing stable key;
-- an incomplete record created an exception;
-- a complete but ambiguous record stopped for owner review.
-
-The scenario was returned to inactive after the route checks. It has no email, messaging, Upwork or proposal action.
+The router performs seven ordered steps: source admission, key generation, required-field checks, duplicate detection, route selection, bounded writes and terminal status. Its writes stay within the intake, opportunity, activity and exception records.
 
 ### Delivery handoff
 
